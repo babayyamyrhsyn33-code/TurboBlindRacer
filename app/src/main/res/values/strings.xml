@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Turbo Blind Racer</string>
+    <string name="start_game">شروع بازی</string>
+    <string name="start_game_desc">دکمه شروع بازی ماشین‌سواری. با دو بار ضربه بازی را شروع کنید.</string>
+    <string name="how_to_play">نحوه بازی</string>
+    <string name="how_to_play_desc">راهنمای کامل بازی برای بازیکنان نابینا و کم‌بینا</string>
+    <string name="high_score">رکورد: %1$d</string>
+    <string name="score">امتیاز: %1$d</string>
+    <string name="speed">سرعت: %1$d</string>
+    <string name="lane_left">لایه چپ</string>
+    <string name="lane_center">لایه وسط</string>
+    <string name="lane_right">لایه راست</string>
+    <string name="obstacle_ahead">مانع نزدیک از جلو!</string>
+    <string name="collected_coin">سکه جمع شد. امتیاز %1$d</string>
+    <string name="collected_nitro">نیترو فعال شد!</string>
+    <string name="collected_shield">سپر فعال شد!</string>
+    <string name="collected_magnet">آهنربا فعال شد!</string>
+    <string name="crash">تصادف! بازی تمام شد. امتیاز نهایی %1$d</string>
+    <string name="new_high_score">رکورد جدید! امتیاز %1$d</string>
+    <string name="pause">توقف</string>
+    <string name="resume">ادامه</string>
+    <string name="restart">شروع مجدد</string>
+    <string name="back_to_menu">بازگشت به منو</string>
+    <string name="swipe_left">به چپ برو</string>
+    <string name="swipe_right">به راست برو</string>
+    <string name="game_started">بازی شروع شد. با کشیدن انگشت به چپ و راست ماشین را کنترل کنید. آیتم‌ها را جمع کنید و از موانع دوری کنید.</string>
+    <string name="welcome">به توربو بلایند ریسر خوش آمدید. بازی ماشین‌سواری کاملاً دسترس‌پذیر برای نابینایان.</string>
+</resources>
