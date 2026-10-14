@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FFFF6B00</color>
+    <color name="cyan">#FF00BCD4</color>
+    <color name="road">#FF2C2C2C</color>
+    <color name="lane_line">#FFFFEB3B</color>
+    <color name="player_car">#FF2196F3</color>
+    <color name="enemy_car">#FFF44336</color>
+    <color name="coin">#FFFFD700</color>
+    <color name="nitro">#FF00E676</color>
+    <color name="shield">#FF9C27B0</color>
+    <color name="magnet">#FFFF5722</color>
+</resources>
