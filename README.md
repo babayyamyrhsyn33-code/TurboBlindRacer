@@ -1,2 +1,18 @@
-# TurboBlindRacer
-A highly accessible Android car racing game written in Java, designed for blind and visually impaired players with full TalkBack support, audio cues, haptic feedback, many power-ups and items. Built with real device sounds.
+# Turbo Blind Racer 🏁♿
+
+بازی ماشین‌سواری **کاملاً دسترس‌پذیر برای نابینایان و کم‌بینایان** نوشته‌شده با **جاوا** برای اندروید.
+
+## ویژگی‌ها
+- کنترل با کشیدن انگشت (Swipe چپ/راست)
+- پشتیبانی کامل از **TalkBack** و اعلام صوتی تمام رویدادها
+- هشدار صوتی هنگام نزدیک شدن مانع
+- ویبره برای فیدبک لمسی
+- آیتم‌های متعدد: سکه، نیترو، سپر، آهنربا
+- افزایش تدریجی سختی
+- رابط فارسی
+
+## ساخت APK
+از تب **Actions** این ریپازیتوری workflow را اجرا کنید و APK را از Artifacts دانلود کنید.
+
+## نصب
+فایل APK را روی گوشی اندروید نصب کنید (منبع ناشناخته را فعال کنید).
