@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,25 +22,40 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew || true
+      - name: Accept Android licenses
+        run: yes | sdkmanager --licenses || true
+
+      - name: Install SDK packages
+        run: |
+          sdkmanager "platforms;android-35" "build-tools;35.0.0" "platform-tools"
+
+      - name: Create local.properties
+        run: echo "sdk.dir=$ANDROID_HOME" > local.properties
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build Debug APK
         run: |
+          if [ ! -f gradlew ]; then
+            gradle wrapper --gradle-version 8.10.2 || true
+          fi
+          chmod +x gradlew 2>/dev/null || true
           if [ -f ./gradlew ]; then
-            ./gradlew assembleDebug --no-daemon
+            ./gradlew assembleDebug --no-daemon --stacktrace
           else
-            echo "No gradlew, creating basic build with gradle"
-            # Install gradle if needed via sdk
-            sdkmanager --install "platforms;android-35" "build-tools;35.0.0" || true
+            gradle assembleDebug --no-daemon --stacktrace
           fi
 
-      - name: Upload APK
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TurboBlindRacer-debug
-          path: app/build/outputs/apk/debug/*.apk
+          name: TurboBlindRacer-debug-apk
+          path: |
+            app/build/outputs/apk/debug/*.apk
           if-no-files-found: warn
+          retention-days: 14
 
-      - name: List outputs
-        run: find . -name "*.apk" || echo "No APK found"
+      - name: Show APK location
+        run: |
+          find . -name "*.apk" -type f || echo "No APK produced"
